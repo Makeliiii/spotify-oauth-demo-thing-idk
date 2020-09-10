@@ -12,6 +12,7 @@ app.get('/login', (req, res) => {
     res.redirect('https://accounts.spotify.com/authorize?' + querystring.stringify({
         response_type: 'code',
         client_id: process.env.CLIENT_ID,
+        scope: 'user-top-read',
         redirect_uri
     }))
 })
